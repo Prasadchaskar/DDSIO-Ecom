@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}ProductDetails{% endblock title %}
+{% block body %}
+  <!-- Product Details -->
+  <section class="section product-detail">
+    <div class="details container">
+      <div class="left">
+        <div class="main">
+          <img src="/media/{{products.main_Img}}" alt="" />
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail">
+            <img src="/media/{{products.img1}}" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="/media/{{products.img2}}" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="/media/{{products.img3}}" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="/media/{{products.img4}}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        
+        <h1>{{ products.product_Name }}</h1>
+        <div class="price">${{ products.price }}</div>
+       
+
+        <form class="form">
+          <input type="text" placeholder="1" />
+          <a href="cart.html" class="addCart">Add To Cart</a>
+        </form>
+        <h3>Product Detail</h3>
+        <p>
+          {{ products.decription }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+
+  
+
+  {% endblock body %}
