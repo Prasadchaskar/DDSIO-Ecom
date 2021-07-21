@@ -5,8 +5,6 @@ from . models import *
 admin.site.register(Categrory)
 admin.site.register(Color)
 
-
-
 class ProductImageAdmin(admin.StackedInline):
     model = ProductImage
 
