@@ -21,14 +21,21 @@ class Product(models.Model):
     color               = models.ForeignKey(Color,on_delete=models.CASCADE)
     short_decription    = models.CharField(max_length=600)
     decription          = models.TextField()
-    main_Img            = models.ImageField(upload_to="myApp/images",default="")
-    img1                = models.ImageField(upload_to="myApp/images",default="")
-    img2                = models.ImageField(upload_to="myApp/images",default="")
-    img3                = models.ImageField(upload_to="myApp/images",default="")
-    img4                = models.ImageField(upload_to="myApp/images",default="")
+    Img                 = models.FileField(blank=True)
+    # img1                = models.ImageField(upload_to="myApp/images",default="")
+    # img2                = models.ImageField(upload_to="myApp/images",default="")
+    # img3                = models.ImageField(upload_to="myApp/images",default="")
+    # img4                = models.ImageField(upload_to="myApp/images",default="")
     is_available        = models.BooleanField(default=True)
     is_active           = models.BooleanField(default=True)
     created             = models.DateField(auto_now_add=True)
 
     def __str__(self) -> str:
+        return self.product_Name
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to="myApp/images")
+ 
+    def __str__(self):
         return self.product_Name

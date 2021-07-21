@@ -4,4 +4,19 @@ from . models import *
 
 admin.site.register(Categrory)
 admin.site.register(Color)
-admin.site.register(Product)
+
+
+
+class ProductImageAdmin(admin.StackedInline):
+    model = ProductImage
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    inlines = [ProductImageAdmin]
+ 
+    class Meta:
+       model = Product
+ 
+@admin.register(ProductImage)
+class ProductImageAdmin(admin.ModelAdmin):
+    pass
