@@ -2,26 +2,29 @@
 {% block title %}ProductDetails{% endblock title %}
 {% block body %}
   <!-- Product Details -->
-  <section class="section product-detail">
+  <h1>hiii</h1>
+  <!-- <section class="section product-detail">
     <div class="details container">
       <div class="left">
         <div class="main">
-          <img src="/media/{{products.main_Img}}" alt="" />
+          <img src="/media/{{products.main_Image}}" alt="" />
         </div>
+    {% for i in  product_img %}
         <div class="thumbnails">
           <div class="thumbnail">
-            <img src="/media/{{products.img1}}" alt="" />
+            <img src="/media/{{i}}" alt="" />
           </div>
-          <div class="thumbnail">
+          <!-- <div class="thumbnail">
             <img src="/media/{{products.img2}}" alt="" />
-          </div>
-          <div class="thumbnail">
+          </div> -->
+          <!-- <div class="thumbnail">
             <img src="/media/{{products.img3}}" alt="" />
           </div>
           <div class="thumbnail">
             <img src="/media/{{products.img4}}" alt="" />
-          </div>
+          </div> -->
         </div>
+        {% endfor %}
       </div>
       <div class="right">
         
@@ -39,7 +42,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Related Products -->
 

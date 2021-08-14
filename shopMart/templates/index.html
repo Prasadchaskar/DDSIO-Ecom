@@ -24,7 +24,7 @@
     {% for product in products %}
       <div class="product">
         <div class="img-container">
-          <img src="/media/{{product.main_Img}}" alt="" />
+          <img src="/media/{{product.main_image}}" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -36,7 +36,7 @@
           </ul>
         </div>
         <div class="bottom">
-          <a href="productdetail/{{ product.id }}">{{ product.product_Name }}</a>
+          <a href="productdetail/{{ product.id }}">{{ product.title }}</a>
           <div class="price">
             <span>${{ product.price }}</span>
           </div>
