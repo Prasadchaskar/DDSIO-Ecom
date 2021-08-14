@@ -12,4 +12,5 @@ def Details(request,myid):
     object = Product.objects.get(pk=myid)
     object.get_images()
     return render(request,'productDetails.html',{'products':products[0],'all_products':all_products})
- 
+
+# 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 
